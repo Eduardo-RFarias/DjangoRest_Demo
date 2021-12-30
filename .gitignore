@@ -88,10 +88,6 @@ celerybeat-schedule
 
 # Environments
 .env
-
-# My projects exclude
-database/
-.vscode/
 .venv
 env/
 venv/
@@ -116,3 +112,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# My projects exclude
+database/
+.vscode/
