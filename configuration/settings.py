@@ -48,7 +48,10 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "knox",
     "corsheaders",
+    "User",
 ]
+
+AUTH_USER_MODEL = "User.User"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -127,6 +130,7 @@ REST_FRAMEWORK = {"DEFAULT_AUTHENTICATION_CLASSES": ("knox.auth.TokenAuthenticat
 
 REST_KNOX = {
     "AUTH_HEADER_PREFIX": "Bearer",
+    "USER_SERIALIZER": "User.serializers.UserSerializer",
 }
 
 # Internationalization

@@ -1,0 +1,254 @@
+_type: export
+__export_format: 4
+__export_date: 2021-12-30T05:03:40.669Z
+__export_source: insomnia.desktop.app:v2021.7.2
+resources:
+  - _id: req_0d490bec3fab4d70a3660d32d50cfc10
+    parentId: fld_64c6081d91a74210b82d082fdd8f50da
+    modified: 1640840599025
+    created: 1640837386833
+    url: '{{ _.base }}/auth/user/'
+    name: list
+    description: ''
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      token: '{{ _.token }}'
+    metaSortKey: -1634836631517
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_64c6081d91a74210b82d082fdd8f50da
+    parentId: wrk_734309ff5e994891962cf579b7cc45d8
+    modified: 1640837386830
+    created: 1640837386830
+    name: auth
+    description: ''
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1634836560591
+    _type: request_group
+  - _id: wrk_734309ff5e994891962cf579b7cc45d8
+    parentId: null
+    modified: 1640837421074
+    created: 1640837386813
+    name: Django tests
+    description: ''
+    scope: collection
+    _type: workspace
+  - _id: req_450ce5d1e6d84893b218dbb610c6bf60
+    parentId: fld_64c6081d91a74210b82d082fdd8f50da
+    modified: 1640840587905
+    created: 1640837921957
+    url: '{{ _.base }}/auth/user/test_user/'
+    name: retrieve
+    description: ''
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      token: '{{ _.token }}'
+    metaSortKey: -1634836631510.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_af9331933f2146b38dfb2c0b02fbeec0
+    parentId: fld_64c6081d91a74210b82d082fdd8f50da
+    modified: 1640840588381
+    created: 1640837654369
+    url: '{{ _.base }}/auth/user/'
+    name: create
+    description: ''
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username":"test_user",
+        	"password":"123456",
+        	"email":"user@example.com",
+        	"full_name":"John Doe"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_81366b8b0cd74a8485955ce97923e74c
+    authentication:
+      type: bearer
+      token: '{{ _.token }}'
+    metaSortKey: -1634836631504.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e67d7760c076429ba9525514128b09a6
+    parentId: fld_64c6081d91a74210b82d082fdd8f50da
+    modified: 1640840591515
+    created: 1640837680969
+    url: '{{ _.base }}/auth/user/test_user/'
+    name: update
+    description: ''
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username":"test_user",
+        	"email":"user@example.com",
+        	"full_name":"John Doe"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_87a4bfecce964547b47c9c0b370935f4
+    authentication:
+      type: bearer
+      token: '{{ _.token }}'
+    metaSortKey: -1634836631498.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_78f01eb92c77467c83a3bf80bfb6f848
+    parentId: fld_64c6081d91a74210b82d082fdd8f50da
+    modified: 1640840592105
+    created: 1640837690998
+    url: '{{ _.base }}/auth/user/test_user/'
+    name: delete
+    description: ''
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      token: '{{ _.token }}'
+    metaSortKey: -1634836631495.125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_92a44005776344d2b62df25ebb5bdb04
+    parentId: fld_64c6081d91a74210b82d082fdd8f50da
+    modified: 1640840598002
+    created: 1640837386846
+    url: '{{ _.base }}/auth/login/'
+    name: login
+    description: ''
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "email": "email@example.com",
+          "password": "123456"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_f7ee69b9c13146e3ad91c0924c072724
+    authentication: {}
+    metaSortKey: -1634836631467
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_7cecada5c2a24cc2b571cce990aacca5
+    parentId: fld_64c6081d91a74210b82d082fdd8f50da
+    modified: 1640840594666
+    created: 1640837386843
+    url: '{{ _.base }}/auth/logout/'
+    name: logout
+    description: ''
+    method: POST
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      token: '{{ _.token }}'
+    metaSortKey: -1634836611615
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_f2b52c02f42f401ebcdf43f8e298d8a8
+    parentId: wrk_734309ff5e994891962cf579b7cc45d8
+    modified: 1640840310159
+    created: 1640837386816
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: {}
+    color: null
+    isPrivate: false
+    metaSortKey: 1628470079021
+    _type: environment
+  - _id: jar_47cf4a4787f84e9fbede573ae5df52ff
+    parentId: wrk_734309ff5e994891962cf579b7cc45d8
+    modified: 1640837386823
+    created: 1640837386823
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_a7264415e88c4472b9557d0f875a009d
+    parentId: wrk_734309ff5e994891962cf579b7cc45d8
+    modified: 1640837386892
+    created: 1640837386827
+    fileName: Famildada
+    contents: ''
+    contentType: yaml
+    _type: api_spec
+  - _id: env_670cf5f480d9482b98cfcc0f9752cf1a
+    parentId: env_f2b52c02f42f401ebcdf43f8e298d8a8
+    modified: 1640840449230
+    created: 1640837527361
+    name: Django test
+    data:
+      base: http://127.0.0.1:8000
+      token: place_your_token_here
+    dataPropertyOrder:
+      '&':
+        - base
+        - token
+    color: null
+    isPrivate: false
+    metaSortKey: 1640837527361
+    _type: environment
