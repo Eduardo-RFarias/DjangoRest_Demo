@@ -8,7 +8,7 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
         model = User
         fields = [
             "url",
-            "username",
+            "id",
             "email",
             "full_name",
             "password",

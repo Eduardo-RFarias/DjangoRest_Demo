@@ -1,11 +1,11 @@
 _type: export
 __export_format: 4
-__export_date: 2021-12-30T05:03:40.669Z
+__export_date: 2021-12-30T06:03:53.780Z
 __export_source: insomnia.desktop.app:v2021.7.2
 resources:
   - _id: req_0d490bec3fab4d70a3660d32d50cfc10
     parentId: fld_64c6081d91a74210b82d082fdd8f50da
-    modified: 1640840599025
+    modified: 1640844221556
     created: 1640837386833
     url: '{{ _.base }}/auth/user/'
     name: list
@@ -46,9 +46,9 @@ resources:
     _type: workspace
   - _id: req_450ce5d1e6d84893b218dbb610c6bf60
     parentId: fld_64c6081d91a74210b82d082fdd8f50da
-    modified: 1640840587905
+    modified: 1640844207230
     created: 1640837921957
-    url: '{{ _.base }}/auth/user/test_user/'
+    url: '{{ _.base }}/auth/user/1/'
     name: retrieve
     description: ''
     method: GET
@@ -69,7 +69,7 @@ resources:
     _type: request
   - _id: req_af9331933f2146b38dfb2c0b02fbeec0
     parentId: fld_64c6081d91a74210b82d082fdd8f50da
-    modified: 1640840588381
+    modified: 1640844210499
     created: 1640837654369
     url: '{{ _.base }}/auth/user/'
     name: create
@@ -79,7 +79,6 @@ resources:
       mimeType: application/json
       text: |-
         {
-        	"username":"test_user",
         	"password":"123456",
         	"email":"user@example.com",
         	"full_name":"John Doe"
@@ -103,9 +102,9 @@ resources:
     _type: request
   - _id: req_e67d7760c076429ba9525514128b09a6
     parentId: fld_64c6081d91a74210b82d082fdd8f50da
-    modified: 1640840591515
+    modified: 1640844217228
     created: 1640837680969
-    url: '{{ _.base }}/auth/user/test_user/'
+    url: '{{ _.base }}/auth/user/1/'
     name: update
     description: ''
     method: PUT
@@ -113,8 +112,7 @@ resources:
       mimeType: application/json
       text: |-
         {
-        	"username":"test_user",
-        	"email":"user@example.com",
+        	"email":"admin@example.com",
         	"full_name":"John Doe"
         }
     parameters: []
@@ -136,9 +134,9 @@ resources:
     _type: request
   - _id: req_78f01eb92c77467c83a3bf80bfb6f848
     parentId: fld_64c6081d91a74210b82d082fdd8f50da
-    modified: 1640840592105
+    modified: 1640844218846
     created: 1640837690998
-    url: '{{ _.base }}/auth/user/test_user/'
+    url: '{{ _.base }}/auth/user/2/'
     name: delete
     description: ''
     method: DELETE
@@ -159,7 +157,7 @@ resources:
     _type: request
   - _id: req_92a44005776344d2b62df25ebb5bdb04
     parentId: fld_64c6081d91a74210b82d082fdd8f50da
-    modified: 1640840598002
+    modified: 1640844219332
     created: 1640837386846
     url: '{{ _.base }}/auth/login/'
     name: login
@@ -169,7 +167,7 @@ resources:
       mimeType: application/json
       text: |-
         {
-          "email": "email@example.com",
+          "email": "admin@example.com",
           "password": "123456"
         }
     parameters: []
@@ -189,7 +187,7 @@ resources:
     _type: request
   - _id: req_7cecada5c2a24cc2b571cce990aacca5
     parentId: fld_64c6081d91a74210b82d082fdd8f50da
-    modified: 1640840594666
+    modified: 1640844219920
     created: 1640837386843
     url: '{{ _.base }}/auth/logout/'
     name: logout
@@ -238,12 +236,12 @@ resources:
     _type: api_spec
   - _id: env_670cf5f480d9482b98cfcc0f9752cf1a
     parentId: env_f2b52c02f42f401ebcdf43f8e298d8a8
-    modified: 1640840449230
+    modified: 1640844197855
     created: 1640837527361
     name: Django test
     data:
       base: http://127.0.0.1:8000
-      token: place_your_token_here
+      token: place your token here
     dataPropertyOrder:
       '&':
         - base

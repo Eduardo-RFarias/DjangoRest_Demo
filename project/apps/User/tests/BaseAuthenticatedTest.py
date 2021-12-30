@@ -23,7 +23,6 @@ class BaseAuthenticatedTest(APITestCase):
             return User.objects.get(email=email)
         except User.DoesNotExist:
             return User.objects.create_superuser(
-                username="test_user",
                 email=email,
                 full_name="example",
                 password=password,

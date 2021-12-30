@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "knox",
     "corsheaders",
-    "User",
+    "project.apps.User",
 ]
 
 AUTH_USER_MODEL = "User.User"
@@ -63,7 +63,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "configuration.urls"
+ROOT_URLCONF = "project.urls"
 
 TEMPLATES = [
     {
@@ -81,7 +81,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "configuration.wsgi.application"
+WSGI_APPLICATION = "project.wsgi.application"
 
 
 # Database
@@ -130,7 +130,7 @@ REST_FRAMEWORK = {"DEFAULT_AUTHENTICATION_CLASSES": ("knox.auth.TokenAuthenticat
 
 REST_KNOX = {
     "AUTH_HEADER_PREFIX": "Bearer",
-    "USER_SERIALIZER": "User.serializers.UserSerializer",
+    "USER_SERIALIZER": "project.apps.User.serializers.UserSerializer",
 }
 
 # Internationalization

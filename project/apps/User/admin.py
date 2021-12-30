@@ -5,7 +5,6 @@ from .models import User
 
 class UserAdmin(admin.ModelAdmin):
     list_display = (
-        "username",
         "email",
         "full_name",
         "is_superuser",
@@ -14,7 +13,7 @@ class UserAdmin(admin.ModelAdmin):
         "is_active",
     )
     list_filter = ["date_joined", "last_login"]
-    search_fields = ["username", "email", "full_name"]
+    search_fields = ["email", "full_name"]
 
 
 admin.site.register(User, UserAdmin)

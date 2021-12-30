@@ -26,4 +26,4 @@ RUN adduser -u 5678 --disabled-password --gecos "" appuser && chown -R appuser /
 USER appuser
 
 # Run gunicorn
-CMD gunicorn configuration.wsgi:application --bind 0.0.0.0:$PORT
+CMD gunicorn project.wsgi:application --bind 0.0.0.0:$PORT
